@@ -1,30 +1,16 @@
-let arr = []
+{'id':4, 'name':'Vladimir','surname':'Burikin'},
+{'id':5, 'name':'Semen','surname':'Veligjanin'}
+]
+for (let i=0; i<students.length; i++) {
+	console.log(students[i].surname+' '+students[i].name)
+let current = 0
 
-function generate() {
-	let n = parseInt(document.getElementById('age').value)
-for (let i=0; i<n; i++) {
-	arr[i]=Math.floor(Math.random()*10)
-let x = {
-	'name':'Rustam', 
-	'age':18,
-	'height':160.5
-}
-print()}
-
-function zerof() {
-	let n = parseInt(document.getElementById('age').value)
-for (let i=0; i<n; i++) {
-	arr[i]=0
-}
-print()
+function load_student(id) {
+	document.getElementById('name').value = students[id].name
+	document.getElementById('surname').value = students[id].surname
 }
 
-function print() {
-	let n = parseInt(document.getElementById('age').value)
-	let div = document.getElementById('mes')
-	div.innerHTML = ' '
-for (let i=0;i<n; i++) {
-	div.innerHTML += arr[i] + ' '
-	}
+function next() {
+	load_student(current)
+	current++
 } 
-console.log(x.name) 
