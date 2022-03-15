@@ -1,16 +1,26 @@
-{'id':4, 'name':'Vladimir','surname':'Burikin'},
-{'id':5, 'name':'Semen','surname':'Veligjanin'}
-]
-for (let i=0; i<students.length; i++) {
-	console.log(students[i].surname+' '+students[i].name)
-let current = 0
-
-function load_student(id) {
-	document.getElementById('name').value = students[id].name
-	document.getElementById('surname').value = students[id].surname
 }
 
 function next() {
+if (current < students.length) {
 	load_student(current)
+	document.getElementById('btnprev').disabled = false
 	current++
-} 
+	load_student(current)
+
+	if (current == 4) {
+		document.getElementById('btnnext').disabled = true
+	}
+}
+else{
+	document.getElementById('btnnext').disabled = true
+}
+
+function prev() {
+	document.getElementById('btnnext').disabled = false
+	current--
+	load_student(current)
+
+	if (current == 0) {
+		document.getElementById('btnprev').disabled = true
+	}
+}
