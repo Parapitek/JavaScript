@@ -4,8 +4,11 @@ function generate() {
 	let n = parseInt(document.getElementById('age').value)
 for (let i=0; i<n; i++) {
 	arr[i]=Math.floor(Math.random()*10)
+let x = {
+	'name':'Rustam', 
+	'age':18,
+	'height':160.5
 }
-let div = document.getElementById('mes')
 print()}
 
 function zerof() {
@@ -23,4 +26,5 @@ function print() {
 for (let i=0;i<n; i++) {
 	div.innerHTML += arr[i] + ' '
 	}
-}
+} 
+console.log(x.name) 
